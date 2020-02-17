@@ -24,6 +24,7 @@ RSpec.describe "Edit an article", type: :feature do
         expect(page).to have_content("Corrected.")
         expect(page).to_not have_content("Title 1")
         expect(page).to_not have_content("This is a mistake!")
+        # expect(page).to have_content("Article '#{article_1.title}' Updated!")
       end
     end
   end
