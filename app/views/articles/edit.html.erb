@@ -1,0 +1,10 @@
+<h1>Edit an Article</h1>
+
+<%= form_tag("/articles/#{@article.id}", method: :patch) do %>
+  <%= label_tag :title %>
+  <%= text_field_tag :title, @article.title %>
+  <%= label_tag :body %>
+  <%= text_field_tag :body, @article.body %>
+
+  <%= submit_tag 'Update Article' %>
+<% end %>
