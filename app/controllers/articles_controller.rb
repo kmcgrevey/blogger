@@ -17,6 +17,11 @@ class ArticlesController < ApplicationController
     redirect_to "/articles/#{article.id}"
   end
 
+  def destroy
+    Article.destroy(params[:id])
+    redirect_to '/articles'
+  end
+
   private
 
     def article_params
